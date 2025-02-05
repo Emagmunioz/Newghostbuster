@@ -7,11 +7,11 @@ import static org.hamcrest.Matchers.*;
 public class GhostTest {
 
     @Test
-    public void testCrearFantasma() {
+    public void testCreateGhost() {
         Ghost ghost = new Fantasma("Espíritu del Pescador de Lastres", ClaseFantasma.CLASE_IV, NivelPeligro.BAJO, "Aparecer durante tormentas en la costa");
-        assertThat(ghost.getNombre(), is("Espíritu del Pescador de Lastres"));
-        assertThat(ghost.getClase(), is(ClaseFantasma.CLASE_IV));
-        assertThat(ghost.getNivelPeligro(), is(NivelPeligro.BAJO));
-        assertThat(ghost.getHabilidad(), is("Aparecer durante tormentas en la costa"));
+        assertThat(ghost.getName(), is("Espíritu del Pescador de Lastres"));
+        assertThat(ghost.getClass(), is(ClaseFantasma.CLASE_IV));
+        assertThat(ghost.getDangerLevel(), is(NivelPeligro.BAJO));
+        assertThat(ghost.getAbilityd(), is("Aparecer durante tormentas en la costa"));
     }
 }
