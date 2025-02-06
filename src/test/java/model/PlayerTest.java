@@ -12,7 +12,10 @@ public class PlayerTest {
     @Test
     public void testCaptureGhost() {
         Player player = new Player();
-        Ghost ghost = new Ghost("Spirit of the Fisherman of Lastres", GhostClass.CLASS_IV, DangerLevel.LOW, "Appears during storms on the coast");
+        Ghost ghost = new Ghost("Spirit of the Fisherman of Lastres", 
+                                Ghost.GhostClass.CLASS_IV, 
+                                Ghost.DangerLevel.LOW, 
+                                "Appears during storms on the coast");
         player.captureGhost(ghost);
         assertThat(player.getCapturedGhosts(), hasSize(1));
         assertThat(player.getCapturedGhosts(), contains(ghost));
@@ -21,7 +24,10 @@ public class PlayerTest {
     @Test
     public void testReleaseGhost() {
         Player player = new Player();
-        Ghost ghost = new Ghost("Spirit of the Fisherman of Lastres", GhostClass.CLASS_IV, DangerLevel.LOW, "Appears during storms on the coast");
+        Ghost ghost = new Ghost("Spirit of the Fisherman of Lastres", 
+                                Ghost.GhostClass.CLASS_IV, 
+                                Ghost.DangerLevel.LOW, 
+                                "Appears during storms on the coast");
         player.captureGhost(ghost);
         player.releaseGhost(ghost);
         assertThat(player.getCapturedGhosts(), hasSize(0));
@@ -30,12 +36,18 @@ public class PlayerTest {
     @Test
     public void testFilterByClass() {
         Player player = new Player();
-        Ghost ghost1 = new Ghost("Spirit of the Fisherman of Lastres", GhostClass.CLASS_IV, DangerLevel.LOW, "Appears during storms on the coast");
-        Ghost ghost2 = new Ghost("Shadows of Mount Naranco", GhostClass.CLASS_II, DangerLevel.MEDIUM, "Appears in mountains");
+        Ghost ghost1 = new Ghost("Spirit of the Fisherman of Lastres", 
+                                 Ghost.GhostClass.CLASS_IV, 
+                                 Ghost.DangerLevel.LOW, 
+                                 "Appears during storms on the coast");
+        Ghost ghost2 = new Ghost("Shadows of Mount Naranco", 
+                                 Ghost.GhostClass.CLASS_II, 
+                                 Ghost.DangerLevel.MEDIUM, 
+                                 "Appears in mountains");
         player.captureGhost(ghost1);
         player.captureGhost(ghost2);
 
-        List<Ghost> filtered = player.filterByClass(GhostClass.CLASS_IV);
+        List<Ghost> filtered = player.filterByClass(Ghost.GhostClass.CLASS_IV);
         assertThat(filtered, hasSize(1));
         assertThat(filtered, contains(ghost1));
     }
@@ -43,7 +55,10 @@ public class PlayerTest {
     @Test
     public void testFilterByMonth() {
         Player player = new Player();
-        Ghost ghost1 = new Ghost("Spirit of the Fisherman of Lastres", GhostClass.CLASS_IV, DangerLevel.LOW, "Appears during storms on the coast");
+        Ghost ghost1 = new Ghost("Spirit of the Fisherman of Lastres", 
+                                 Ghost.GhostClass.CLASS_IV, 
+                                 Ghost.DangerLevel.LOW, 
+                                 "Appears during storms on the coast");
         player.captureGhost(ghost1);
 
         List<Ghost> filtered = player.filterByMonth(LocalDate.now().getMonthValue());
