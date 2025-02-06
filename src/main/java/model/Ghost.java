@@ -3,39 +3,52 @@ package model;
 import java.time.LocalDate;
 
 public class Ghost {
-private String name;
-    private ClassGhost class;
+    public enum GhostClass {
+        CLASS_I, CLASS_II, CLASS_III, CLASS_IV, CLASS_V, CLASS_VI, CLASS_VII
+    }
+
+    public enum DangerLevel {
+        LOW, MEDIUM, HIGH, CRITICAL
+    }
+
+    private String name;
+    private GhostClass ghostClass;
     private DangerLevel dangerLevel;
     private String ability;
-    private LocalDate dateBusted;
+    private LocalDate captureDate;
+
+    public Ghost(String name, GhostClass ghostClass, DangerLevel dangerLevel, String ability) {
+        this.name = name;
+        this.ghostClass = ghostClass;
+        this.dangerLevel = dangerLevel;
+        this.ability = ability;
+        this.captureDate = LocalDate.now();
+    }
+
     public String getName() {
         return name;
     }
-    public ClassGhost getClass() {
-        return class;
+
+    public GhostClass getGhostClass() {
+        return ghostClass;
     }
+
     public DangerLevel getDangerLevel() {
-        return DangerLevel;
+        return dangerLevel;
     }
+
     public String getAbility() {
         return ability;
     }
-    public LocalDate getDateBusted() {
-        return dateBusted;
+
+    public LocalDate getCaptureDate() {
+        return captureDate;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setClass(ClassGhost class) {
-        this.class = class;
-    }
-    public void setDangerLevel(DangerLevel dangerLevel) {
-        this.dangerLevel = dangerLevel;
-    }
-    public void setAbility(String ability) {
-        this.ability = ability;
-    }
-    public void setDateBusted(LocalDate dateBusted) {
-        this.dateBusted = dateBusted;
+
+    @Override
+    public String toString() {
+        return "Ghost{name='" + name + "', class=" + ghostClass + 
+               ", danger=" + dangerLevel + ", ability='" + ability + 
+               "', captured=" + captureDate + "}";
     }
 }
