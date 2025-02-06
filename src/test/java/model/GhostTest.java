@@ -8,10 +8,10 @@ public class GhostTest {
 
     @Test
     public void testCreateGhost() {
-        Ghost ghost = new Ghost("Espíritu del Pescador de Lastres", ClaseFantasma.CLASE_IV, NivelPeligro.BAJO, "Aparecer durante tormentas en la costa");
-        assertThat(ghost.getName(), is("Espíritu del Pescador de Lastres"));
-        assertThat(ghost.getClass(), is(ClaseFantasma.CLASE_IV));
-        assertThat(ghost.getDangerLevel(), is(NivelPeligro.BAJO));
-        assertThat(ghost.getAbilityd(), is("Aparecer durante tormentas en la costa"));
+        Ghost ghost = new Ghost("Spirit of the Fisherman of Lastres", GhostClass.CLASS_IV, DangerLevel.LOW, "Appears during storms on the coast");
+        assertThat(ghost.getName(), is("Spirit of the Fisherman of Lastres"));
+        assertThat(ghost.getGhostClass(), is(GhostClass.CLASS_IV));
+        assertThat(ghost.getDangerLevel(), is(DangerLevel.LOW));
+        assertThat(ghost.getAbility(), is("Appears during storms on the coast"));
     }
 }
