@@ -1,6 +1,6 @@
 package model;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -8,10 +8,16 @@ public class GhostTest {
 
     @Test
     public void testCreateGhost() {
-        Ghost ghost = new Fantasma("Espíritu del Pescador de Lastres", ClaseFantasma.CLASE_IV, NivelPeligro.BAJO, "Aparecer durante tormentas en la costa");
-        assertThat(ghost.getName(), is("Espíritu del Pescador de Lastres"));
-        assertThat(ghost.getClass(), is(ClaseFantasma.CLASE_IV));
-        assertThat(ghost.getDangerLevel(), is(NivelPeligro.BAJO));
-        assertThat(ghost.getAbilityd(), is("Aparecer durante tormentas en la costa"));
+        Ghost ghost = new Ghost(
+            "Spirit of the Fisherman of Lastres",
+            Ghost.GhostClass.CLASS_IV, 
+            Ghost.DangerLevel.LOW,      
+            "Appears during storms on the coast"
+        );
+
+        assertThat(ghost.getName(), is("Spirit of the Fisherman of Lastres"));
+        assertThat(ghost.getGhostClass(), is(Ghost.GhostClass.CLASS_IV));  
+        assertThat(ghost.getDangerLevel(), is(Ghost.DangerLevel.LOW));      
+        assertThat(ghost.getAbility(), is("Appears during storms on the coast"));
     }
 }
