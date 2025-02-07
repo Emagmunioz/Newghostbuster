@@ -1,0 +1,25 @@
+# 👻 GhostBusters Asturias
+
+A Java console-based ghost hunting game where players can capture, release, and filter ghosts by class and month. The project follows a MVC architecture with `model`, `controller`, and `view` packages.
+
+---
+
+## 📜 Features
+
+✔ Capture ghosts with unique abilities.  
+✔ Release ghosts from the player's collection.  
+✔ Filter ghosts by class or the month they were captured.  
+✔ Console-based interactive UI for easy management.  
+
+---
+
+## 🛠 Technologies Used
+
+- ava  
+- JUnit 5 (for testing)  
+- Hamcrest (for assertions)  
+
+---
+
+## 📂 Project Structure
+
