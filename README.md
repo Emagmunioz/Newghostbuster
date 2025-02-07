@@ -38,6 +38,7 @@ A Java console-based ghost hunting game where players can capture, release, and 
  ┃ ┃ ┣ 📜 PlayerTest.java
  ┗ 📜 Main.java
 ```
+---
 
 🎮 How to Play
 1. Capture a Ghost
@@ -60,3 +61,6 @@ A Java console-based ghost hunting game where players can capture, release, and 
 
 6. Exit the Game
 - Quits the application.
+
+---
+
