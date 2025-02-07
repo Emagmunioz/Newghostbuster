@@ -23,3 +23,16 @@ A Java console-based ghost hunting game where players can capture, release, and 
 
 ## 📂 Project Structure
 
+📦 ghostbusters
+ ┣ 📂 src
+ ┃ ┣ 📂 model
+ ┃ ┃ ┣ 📜 Ghost.java
+ ┃ ┃ ┣ 📜 Player.java
+ ┃ ┣ 📂 controller
+ ┃ ┃ ┣ 📜 Controller.java
+ ┃ ┣ 📂 view
+ ┃ ┃ ┣ 📜 ConsoleView.java
+ ┃ ┣ 📂 test
+ ┃ ┃ ┣ 📜 GhostTest.java
+ ┃ ┃ ┣ 📜 PlayerTest.java
+ ┗ 📜 Main.java
