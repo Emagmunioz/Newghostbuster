@@ -1,6 +1,5 @@
 package dev.eva.View;
 import model.Ghost;
-import model.Player;
 import controler.Controler;
 import java.util.List;
 import java.util.Scanner;
@@ -9,7 +8,7 @@ public class Main {
     private Controler controler;
     private Scanner scanner;
 
-    public ConsoleView(Controler controler) {
+    public void ConsoleView(Controler controler) {
         this.controler = controler;
         this.scanner = new Scanner(System.in);
     }
@@ -145,17 +144,9 @@ public class Main {
         System.out.println("View Ghosts Captured in a Specific Month");
         System.out.println("============================================");
         System.out.print("Enter the month (1-12): ");
-        int month = scanner.nextInt();
 
-        List<Fantasma> filtered = controller.filterByMonth(month);
-        if (filtered.isEmpty()) {
-            System.out.println("No ghosts captured in month " + month + ".");
-        } else {
-            for (Fantasma ghost : filtered) {
-                System.out.println(ghost);
-            }
-        }
+       
+    
     }
-}
 
 }
