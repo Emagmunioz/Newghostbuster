@@ -15,7 +15,7 @@ A Java console-based ghost hunting game where players can capture, release, and 
 
 ## 🛠 Technologies Used
 
-- ava  
+- Java  
 - JUnit 5 (for testing)  
 - Hamcrest (for assertions)  
 
