@@ -1,5 +1,6 @@
 package dev.eva.View;
 import model.Ghost;
+import model.Player;
 import controler.Controler;
 import java.util.List;
 import java.util.Scanner;
