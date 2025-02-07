@@ -39,7 +39,7 @@ A Java console-based ghost hunting game where players can capture, release, and 
  ┗ 📜 Main.java
 ```
 
- ##🎮 How to Play
+##🎮 How to Play
 1. Capture a Ghost
 - Enter a name, class, danger level, and ability.
 - Example: "Phantom of the Lighthouse", CLASS_III, HIGH, "Haunts lost ships"
