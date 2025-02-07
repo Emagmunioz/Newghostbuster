@@ -51,7 +51,7 @@ A Java console-based ghost hunting game where players can capture, release, and 
 3. Release a Ghost
 - Removes a ghost from your captured list.
 
-4.Filter by Class
+4. Filter by Class
 - Allows filtering ghosts by their assigned class.
 - Example: Show only CLASS_IV ghosts.
 
