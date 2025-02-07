@@ -6,6 +6,7 @@ import controler.Controler;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class App {
     private Controler controler;
     private Scanner scanner;
@@ -15,7 +16,7 @@ public class App {
         this.scanner = new Scanner(System.in);
     }
 
-    public  void start() {
+    public void start() {
         while (true) {
             System.out.println("\n===== Ghostbusters Asturias Base =====");
             System.out.println("1. Capture a ghost");
@@ -25,9 +26,9 @@ public class App {
             System.out.println("5. Filter ghosts by month");
             System.out.println("6. Exit");
             System.out.print("Choose an option: ");
-            
+
             int option = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // Consume el salto de línea
 
             switch (option) {
                 case 1 -> captureGhost();
@@ -103,5 +104,11 @@ public class App {
 
         List<Ghost> ghosts = controler.filterByMonth(month);
         ghosts.forEach(System.out::println);
+    }
+
+    public static void main(String[] args) {
+        Controler controler = new Controler(null);
+        App app = new App(controler);
+        app.start();
     }
 }

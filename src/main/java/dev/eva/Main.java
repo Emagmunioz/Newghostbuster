@@ -1,9 +1,14 @@
-package dev.eva.View;
+package dev.eva;
 import model.Ghost;
 import controler.Controler;
 import java.util.List;
 import java.util.Scanner;
 public class Main {
+    public static void main(String[]aStrings){
+        Controler controler =new Controler(null);
+    App app =new App(controler);
+    app.start();
+}
 
     private Controler controler;
     private Scanner scanner;
@@ -28,7 +33,7 @@ public class Main {
             System.out.println("6. Exit");
             System.out.print("Please select an option (1-6): ");
             int option = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine(); 
 
             switch (option) {
                 case 1:
@@ -111,7 +116,7 @@ public class Main {
                 break;
             }
         }
-
+    
         if (ghostToRelease != null) {
             controler.releaseGhost(ghostToRelease);
             System.out.println("Ghost \"" + name + "\" released successfully.");
@@ -144,9 +149,15 @@ public class Main {
         System.out.println("View Ghosts Captured in a Specific Month");
         System.out.println("============================================");
         System.out.print("Enter the month (1-12): ");
-
-       
+    }
     
+    private void filterGhosstByMonth() {
+        System.out.print("Enter month (1-12): ");
+        int month = scanner.nextInt();
+
+        List<Ghost> ghosts = controler.filterByMonth(month);
+        ghosts.forEach(System.out::println);
     }
 
 }
+
