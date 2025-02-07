@@ -23,6 +23,7 @@ A Java console-based ghost hunting game where players can capture, release, and 
 
 ## 📂 Project Structure
 
+```plaintext
 📦 ghostbusters
  ┣ 📂 src
  ┃ ┣ 📂 model
