@@ -27,5 +27,10 @@ public class Controler {
         return player.filterByMonth(month);
     }
 
+
+    public List<Ghost> getCapturedGhosts() {
+        throw new UnsupportedOperationException("Unimplemented method 'getCapturedGhosts'");
+    }
+
 }
 

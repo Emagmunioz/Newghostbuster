@@ -8,7 +8,7 @@ public class Main {
     private Controler controler;
     private Scanner scanner;
 
-    public void ConsoleView(Controler controler) {
+    public  void Console(Controler controler) {
         this.controler = controler;
         this.scanner = new Scanner(System.in);
     }
@@ -75,7 +75,7 @@ public class Main {
         String dangerLevelStr = scanner.next().toUpperCase();
         Ghost.DangerLevel dangerLevel = Ghost.DangerLevel.valueOf(dangerLevelStr);
 
-        scanner.nextLine(); // Consume the newline character
+        scanner.nextLine(); 
         System.out.print("Ghost's special ability: ");
         String ability = scanner.nextLine();
 
